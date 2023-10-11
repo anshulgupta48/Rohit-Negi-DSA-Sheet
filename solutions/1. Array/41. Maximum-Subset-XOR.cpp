@@ -8,6 +8,10 @@
 // Output: 13
 
 
+// Expected Time Complexity ==> O(N*Log(max(arr[i])))
+// Expected Auxiliary Space ==> O(1)
+
+
 
 
 class Solution {

@@ -8,6 +8,10 @@
 // Output: 16
 
 
+// Expected Time Complexity ==> O(n)
+// Expected Auxiliary Space ==> O(1)
+
+
 
 
 class Solution{
