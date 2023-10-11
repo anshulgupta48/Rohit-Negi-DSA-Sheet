@@ -7,6 +7,9 @@
 // Input: a[] = {3, 1, 3, 3, 2}, size = 5
 // Output: 3
 
+// Expected Time Complexity ==> O(N)
+// Expected Auxiliary Space ==> O(1)
+
 
 
 
