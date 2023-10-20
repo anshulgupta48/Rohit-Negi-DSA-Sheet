@@ -17,24 +17,22 @@
 class Solution{
 public:
     vector<int> findTwoElement(vector<int> arr, int n) {
-        long long m = n;
-        long long totalSum = m*(m+1) / 2;
-        long long sum = 0;
-        long long squareTotalSum = (m*(m+1)*(2*m+1)) / 6;
-        long long squareSum = 0;
-        
-        for(int i = 0; i < m; i++) {
-            sum += arr[i];
-            squareSum += (long long)arr[i] * (long long)arr[i];
+        vector<int> ans(2);
+        for(int i = 0; i < n; i++) {
+            if(arr[abs(arr[i])-1] > 0) {
+                arr[abs(arr[i])-1] = -arr[abs(arr[i])-1];
+            }
+            else {
+                ans[0] = abs(arr[i]);
+            }
         }
         
-        long long val1 = sum - totalSum;
-        long long val2 = squareSum - squareTotalSum;
-        val2 = val2 / val1;
+        for(int i = 0; i < n; i++) {
+            if(arr[i] > 0) {
+                ans[1] = i+1;
+            }
+        }
         
-        long long x = (val1 + val2) / 2;
-        long long y = x - val1;
-        
-        return {(int)x, (int)y};
+        return ans;
     }
 };
