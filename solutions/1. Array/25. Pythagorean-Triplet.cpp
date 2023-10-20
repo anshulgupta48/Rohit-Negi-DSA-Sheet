@@ -23,18 +23,18 @@ public:
 	    
 	    sort(arr, arr+n);
 	    for(int i = n-1; i >= 2; i--) {
-	        int b = 0;
-	        int c = i-1;
+	        int start = 0;
+	        int end = i-1;
 	        
-	        while(b < c) {
-	            if(arr[b] + arr[c] == arr[i]){
+	        while(start < end) {
+	            if(arr[start] + arr[end] == arr[i]){
                     return true;
                 }
-                else if (arr[b] + arr[c] < arr[i]) {
-                    b++;
+                else if (arr[start] + arr[end] < arr[i]) {
+                    start++;
                 }
                 else { 
-                    c--; 
+                    end--; 
                 }
 	        }
 	    }
