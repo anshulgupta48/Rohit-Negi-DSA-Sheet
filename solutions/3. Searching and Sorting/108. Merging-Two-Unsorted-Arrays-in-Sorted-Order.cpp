@@ -1,4 +1,4 @@
-// ******** GIven two different arrays A and B of size N and M, the task is to merge the two arrays which are unsorted into another array which is sorted. ********
+// ******** Given two different arrays A and B of size N and M, the task is to merge the two arrays which are unsorted into another array which is sorted. ********
 
 // <======== Example ========>
 // Input: N = 3, M = 3, A[] = {10, 5, 15}, B[] = {20, 3, 2}
