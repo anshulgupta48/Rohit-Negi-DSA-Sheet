@@ -1,4 +1,4 @@
-// ******** Given a matrix of size n x m, where every row and column is sorted in increasing order, and a number x. Find whether element x is present in the matrix or not. ********
+// ******** Given a matrix of size n x m, where every row and column is sorted in increasing order, and a number x. Find whether element x is present in the matrix or not ********
 
 // <======== Example ========>
 // Input: n = 3, m = 3, x = 62, matrix[][] = {{ 3, 30, 38}, {36, 43, 60}, {40, 51, 69}}
@@ -9,7 +9,7 @@
 
 
 // Expected Time Complexity ==> O(N + M)
-// Expected Auxiliary Space ==> O(1)
+// Expected Auxiliary Space ==> O(1) 
 
 
 
