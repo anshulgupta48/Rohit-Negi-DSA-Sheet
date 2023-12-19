@@ -5,7 +5,7 @@
 // Output: 1
 
 // Input: nums = {10, 19, 6, 3, 5}
-// Output: 2
+// Output: 2 
 
 
 // Expected Time Complexity ==> O(n*logn)
