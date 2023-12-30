@@ -5,7 +5,7 @@
 // Output: 5 2 4
 
 // Input: N = 5, value[] = {2,2,2,2,2}
-// Output: 2 
+// Output: 2
 
 
 // Expected Time Complexity ==> O(N).
