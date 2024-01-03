@@ -3,7 +3,7 @@
 
 // <======== Example ========>
 // Input: LinkedList: 1->2->3->4->5
-// Output: 1
+// Output: 1 
 
 // Input: LinkedList: 2->4->6->7->5->1
 // Output: 0
