@@ -22,16 +22,15 @@ public:
         int start = 0;
         int end = n-1;
         
-        while(start < end) {
+        while(start <= end) {
             int mid = start + (end - start) / 2;
-            
-            if((arr[mid+1] - arr[mid]) != d) {
-                return (arr[mid] + d);
+            if(arr[mid+1] - arr[mid] != d) {
+                return arr[mid]+d;
             }
-            else if((mid > 0) && (arr[mid] - arr[mid-1]) != d) {
-                return (arr[mid-1] + d);
+            else if(arr[mid] - arr[mid-1] != d) {
+                return arr[mid]-d;
             }
-            else if(arr[mid] == (arr[0] + mid * d)) {
+            else if(arr[mid] == arr[0] + mid*d) {
                 start = mid + 1;
             }
             else {
