@@ -17,20 +17,18 @@
 class Solution{
     public:
     void segregateElements(int arr[],int n) {
-        int i = 0;
         int temp[n];
+        int i = 0;
         
         for(int j = 0; j < n; j++) {
             if(arr[j] > 0) {
-                temp[i] = arr[j];
-                i++;
+                temp[i++] = arr[j];
             }
         }
         
         for(int j = 0; j < n; j++) {
             if(arr[j] < 0) {
-                temp[i] = arr[j];
-                i++;
+                temp[i++] = arr[j];
             }
         }
         

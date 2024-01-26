@@ -22,7 +22,6 @@ pair<long long, long long> getMinMax(long long a[], int n) {
         if(a[i] < minElement) {
             minElement = a[i];
         }
-        
         if(a[i] > maxElement) {
             maxElement = a[i];
         }
