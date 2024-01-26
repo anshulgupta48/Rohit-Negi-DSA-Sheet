@@ -21,7 +21,6 @@ public:
 
         int start = 0;
         int end = row*col - 1;
-
         while(start <= end) {
             int mid = start + (end - start) / 2;
             int element = matrix[mid/col][mid%col];
@@ -29,11 +28,11 @@ public:
             if(element == target) {
                 return true;
             }
-            else if(element > target) {
-                end = mid - 1;
+            else if(element < target) {
+                start = mid + 1;
             }
             else {
-                start = mid + 1;
+                end = mid - 1;
             }
         }
 
