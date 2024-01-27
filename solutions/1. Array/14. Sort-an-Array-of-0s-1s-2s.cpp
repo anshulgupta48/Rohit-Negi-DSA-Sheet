@@ -19,11 +19,11 @@ class Solution {
     void sort012(int a[], int n) {
         int start = 0;
         int mid = 0;
-        int end = n - 1;
+        int end = n-1;
         
         while(mid <= end) {
             if(a[mid] == 0) {
-                swap(a[start], a[mid]);
+                swap(a[mid], a[start]);
                 start++;
                 mid++;
             }

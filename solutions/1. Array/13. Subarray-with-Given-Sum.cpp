@@ -18,13 +18,13 @@
 class Solution {
     public:
     vector<int> subarraySum(vector<int>arr, int n, long long s) {
+        long long sum = 0;
         int start = 0;
         int end = 0;
-        long long sum = 0;
         
         while(end < n) {
             sum += arr[end];
-            while(sum>s && start<end) {
+            while(sum > s && start < end) {
                 sum -= arr[start];
                 start++;
             }
