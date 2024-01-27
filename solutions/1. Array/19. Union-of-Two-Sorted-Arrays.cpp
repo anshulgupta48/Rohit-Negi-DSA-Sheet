@@ -41,7 +41,6 @@ class Solution{
             }
         }
         
-        
         while(i < n) {
             if(ans.back() != arr1[i]) {
                 ans.push_back(arr1[i]);
@@ -50,7 +49,6 @@ class Solution{
             i++;
         }
         
-        
         while(j < m) {
             if(ans.back() != arr2[j]) {
                 ans.push_back(arr2[j]);
@@ -58,7 +56,6 @@ class Solution{
             
             j++;
         }
-        
         
         return ans;
     }
