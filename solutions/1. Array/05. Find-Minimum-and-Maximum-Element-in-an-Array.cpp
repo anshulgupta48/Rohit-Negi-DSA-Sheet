@@ -17,7 +17,7 @@
 pair<long long, long long> getMinMax(long long a[], int n) {
     long long minElement = INT_MAX;
     long long maxElement = INT_MIN;
-    
+        
     for(int i = 0; i < n; i++) {
         if(a[i] < minElement) {
             minElement = a[i];
@@ -26,6 +26,6 @@ pair<long long, long long> getMinMax(long long a[], int n) {
             maxElement = a[i];
         }
     }
-    
+        
     return {minElement, maxElement};
 }
