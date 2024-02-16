@@ -18,7 +18,6 @@ class Solution{
 public:
     int remove_duplicate(int a[],int n){
         int i = 0;
-        
         for(int j = 0; j < n-1; j++) {
             if(a[j] != a[j+1]) {
                 a[i++] = a[j];
