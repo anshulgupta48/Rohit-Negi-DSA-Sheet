@@ -24,7 +24,7 @@ public:
         while(start <= end) {
             int mid = start + (end - start) / 2;
             int element = matrix[mid/col][mid%col];
-
+            
             if(element == target) {
                 return true;
             }
