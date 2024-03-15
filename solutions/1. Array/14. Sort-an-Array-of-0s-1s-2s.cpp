@@ -23,7 +23,7 @@ class Solution {
         
         while(mid <= end) {
             if(a[mid] == 0) {
-                swap(a[mid], a[start]);
+                swap(a[start], a[mid]);
                 start++;
                 mid++;
             }
