@@ -17,10 +17,11 @@
 class Solution {
   public:
     int unvisitedLeaves(int N, int leaves, int frogs[]) {
+        int ans = 0;
         vector<int> visited(leaves+1, 0);
+        
         for(int i = 0; i < N; i++) {
             int temp = frogs[i];
-            
             if(temp <= leaves && visited[temp] == 0) {
                 for(int j = temp; j <= leaves; j+=temp) {
                     visited[j] = 1;
@@ -28,7 +29,6 @@ class Solution {
             }
         }
         
-        int ans = 0;
         for(int i = 1; i <= leaves; i++) {
             if(visited[i] == 0) {
                 ans++;
