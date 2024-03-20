@@ -2,7 +2,7 @@
 
 // <======== Example ========>
 // Input: S = "abba"
-// Output: 1
+// Output: 1 
 
 // Input: S = "abc"
 // Output: 0
