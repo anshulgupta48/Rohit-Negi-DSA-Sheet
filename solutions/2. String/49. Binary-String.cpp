@@ -24,6 +24,7 @@ class Solution {
             }
         }
         
-        return (count*(count-1))/2;
+        long ans = count*(count-1) / 2;
+        return ans;
     }
 };

@@ -17,19 +17,19 @@
 class Solution {
     public:
     char getMaxOccuringChar(string str) {
-        int n = str.size();
-        int maxElement = 0;
-        int ans = 0;
-        map<char, int> mp;
+        int n = str.length();
+        char ans;
+        int maxLength = 0;
         
+        map<char, int> mp;
         for(int i = 0; i < n; i++) {
             int element = str[i];
             mp[element]++;
         }
         
         for(auto x: mp) {
-            if(x.second > maxElement) {
-                maxElement = x.second;
+            if(x.second > maxLength) {
+                maxLength = x.second;
                 ans = x.first;
             }
         }
