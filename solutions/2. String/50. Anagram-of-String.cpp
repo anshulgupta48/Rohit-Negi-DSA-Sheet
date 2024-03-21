@@ -15,15 +15,17 @@
 
 
 int remAnagram(string str1, string str2) {
-    unordered_map<char, int> mp;
+    map<char, int> mp;
     int ans = 0;
     
-    for(int i = 0; i < str1.size(); i++) {
-        mp[str1[i]]++;
+    for(int i = 0; i < str1.length(); i++) {
+        int element = str1[i];
+        mp[element]++;
     }
     
-    for(int i = 0; i < str2.size(); i++) {
-        mp[str2[i]]--;
+    for(int i = 0; i < str2.length(); i++) {
+        int element = str2[i];
+        mp[element]--;
     }
     
     for(auto x: mp) {

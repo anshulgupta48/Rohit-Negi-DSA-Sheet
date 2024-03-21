@@ -17,10 +17,12 @@
 class Solution {
     public:
     string reverseWords(string S) { 
+        int n = S.length();
+        string ans = "";
+        string temp = "";
         stack<string> st;
-        string temp = "", ans = "";
         
-        for(int i = 0; i < S.size(); i++) {
+        for(int i = 0; i < n; i++) {
             if(S[i] != '.') {
                 temp += S[i];
             }
@@ -29,15 +31,15 @@ class Solution {
                 temp = "";
             }
         }
-        
         st.push(temp);
+        
         while(st.size() > 0) {
-            if(st.size() > 1) {
-                ans = ans + st.top() + ".";
+            if(st.size() != 1) {
+                ans += st.top() + '.';
                 st.pop();
             }
             else {
-                ans = ans + st.top();
+                ans += st.top();
                 st.pop();
             }
         }
