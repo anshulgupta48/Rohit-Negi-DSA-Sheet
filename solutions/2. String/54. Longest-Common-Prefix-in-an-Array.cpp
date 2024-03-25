@@ -2,7 +2,7 @@
 
 // <======== Example ========>
 // Input: N = 4, arr[] = {geeksforgeeks, geeks, geek, geezer}
-// Output: gee
+// Output: gee 
 
 // Input: N = 2, arr[] = {hello, world}
 // Output: -1
