@@ -3,7 +3,7 @@
 
 // <======== Example ========>
 // Input: plants = [2,2,3,3], capacity = 5
-// Output: 14
+// Output: 14 
 
 // Input: plants = [1,1,1,4,2,3], capacity = 4
 // Output: 30
