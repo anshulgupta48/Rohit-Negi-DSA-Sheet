@@ -18,39 +18,33 @@ class Solution {
   public:
     long long maxTripletProduct(long long arr[], int n) {
     	long long firstMax = INT_MIN, secondMax = INT_MIN, thirdMax = INT_MIN;
-    	long long firstMin = INT_MAX, secondMin = INT_MAX;
-    	
-    	for(int i = 0; i < n; i++) {
-    	    if(arr[i] > firstMax) {
-    	        thirdMax = secondMax;
-    	        secondMax = firstMax;
-    	        firstMax = arr[i];
-    	    }
-    	    else if(arr[i] > secondMax) {
-    	        thirdMax = secondMax;
-    	        secondMax = arr[i];
-    	    }
-    	    else if(arr[i] > thirdMax) {
-    	        thirdMax = arr[i];
-    	    }
-    	    
-    	    
-    	    if(arr[i] < firstMin) {
-    	        secondMin = firstMin;
-    	        firstMin = arr[i];
-    	    }
-    	    else if(arr[i] < secondMin) {
-    	        secondMin = arr[i];
-    	    }
-    	}
-    	
-    	
-    	long long triplet1 = firstMax * secondMax * thirdMax;
-    	long long triplet2 = firstMax * firstMin * secondMin;
-    	if(triplet1 > triplet2) {
-    	    return triplet1;
-    	}
-    	
-    	return triplet2;
+        long long firstMin = INT_MAX, secondMin = INT_MAX;
+        
+        for(int i = 0; i < n; i++) {
+            if(arr[i] > firstMax) {
+                thirdMax = secondMax;
+                secondMax = firstMax;
+                firstMax = arr[i];
+            }
+            else if(arr[i] > secondMax) {
+                thirdMax = secondMax;
+                secondMax = arr[i];
+            }
+            else if(arr[i] > thirdMax) {
+                thirdMax = arr[i];
+            }
+            
+            if(arr[i] < firstMin) {
+                secondMin = firstMin;
+                firstMin = arr[i];
+            }
+            else if(arr[i] < secondMin) {
+                secondMin = arr[i];
+            }
+        }
+        
+        long long triplet1 = firstMax * secondMax * thirdMax;
+        long long triplet2 = firstMax * firstMin * secondMin;
+        return max(triplet1, triplet2);
     }
 };
