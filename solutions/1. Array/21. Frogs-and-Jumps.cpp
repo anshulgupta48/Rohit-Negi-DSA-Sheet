@@ -17,24 +17,24 @@
 class Solution {
   public:
     int unvisitedLeaves(int N, int leaves, int frogs[]) {
-        int ans = 0;
-        vector<int> visited(leaves+1, 0);
+        int count = 0;
+        vector<bool> visited(leaves+1, false);
         
         for(int i = 0; i < N; i++) {
             int temp = frogs[i];
-            if(temp <= leaves && visited[temp] == 0) {
+            if(temp <= leaves && visited[temp] == false) {
                 for(int j = temp; j <= leaves; j+=temp) {
-                    visited[j] = 1;
+                    visited[j] = true;
                 }
             }
         }
         
         for(int i = 1; i <= leaves; i++) {
-            if(visited[i] == 0) {
-                ans++;
+            if(visited[i] == false) {
+                count++;
             }
         }
         
-        return ans;
+        return count;
     }
 };
