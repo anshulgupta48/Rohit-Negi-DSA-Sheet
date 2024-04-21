@@ -32,7 +32,6 @@ class Solution {
             if(sum == s) {
                 return {start+1, end+1};
             }
-            
             end++;
         }
         

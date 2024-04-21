@@ -18,8 +18,8 @@
 class Solution{
     public:
     int equilibriumPoint(long long a[], int n) {
-        long long totalSum = 0;
-        long long sum = 0;
+        int totalSum = 0;
+        int sum = 0;
         
         for(int i = 0; i < n; i++) {
             totalSum += a[i];
@@ -27,8 +27,8 @@ class Solution{
         
         for(int i = 0; i < n; i++) {
             totalSum -= a[i];
-            if(totalSum == sum) {
-                return (i+1);
+            if(sum == totalSum) {
+                return i+1;
             }
             sum += a[i];
         }
