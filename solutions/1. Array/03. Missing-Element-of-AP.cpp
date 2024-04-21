@@ -18,7 +18,7 @@
 class Solution{   
 public:
     int findMissing(int arr[], int n) {
-        int d = (arr[n-1] - arr[0]) / n;
+        int d = (arr[n-1]-arr[0]) / n;
         int start = 0;
         int end = n-1;
         
@@ -30,7 +30,7 @@ public:
             else if(arr[mid]-arr[mid-1] != d) {
                 return arr[mid]-d;
             }
-            else if(arr[mid] == arr[0]+mid*d) {
+            else if(arr[mid] == arr[0] + mid*d) {
                 start = mid + 1;
             }
             else {
