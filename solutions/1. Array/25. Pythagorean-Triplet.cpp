@@ -27,15 +27,15 @@ public:
 	        int end = i-1;
 	        
 	        while(start < end) {
-	            if(arr[start] + arr[end] == arr[i]){
-                    return true;
-                }
-                else if (arr[start] + arr[end] < arr[i]) {
-                    start++;
-                }
-                else { 
-                    end--; 
-                }
+	            if(arr[start] + arr[end] == arr[i]) {
+	                return true;
+    	        }
+    	        else if(arr[start] + arr[end] < arr[i]) {
+    	            start++;
+    	        }
+    	        else {
+    	            end--;
+    	        }
 	        }
 	    }
 	    
