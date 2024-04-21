@@ -20,7 +20,7 @@ public:
 	    int replace = -1;
 	    for(int i = n-1; i >= 0; i--) {
 	        int temp = replace;
-	        replace = max(arr[i], temp);
+	        replace = max(temp, arr[i]);
 	        arr[i] = temp;
 	    }
 	}
