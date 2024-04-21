@@ -25,35 +25,31 @@ class Solution{
         int j = 0;
         
         while(i < n && j < m) {
-            if(arr1[i] <= arr2[j]) {
+            if(arr1[i] < arr2[j]) {
                 if(ans.size() == 0 || ans.back() != arr1[i]) {
                     ans.push_back(arr1[i]);
                 }
-                
                 i++;
             }
             else {
                 if(ans.size() == 0 || ans.back() != arr2[j]) {
                     ans.push_back(arr2[j]);
                 }
-                
                 j++;
             }
         }
         
         while(i < n) {
-            if(ans.back() != arr1[i]) {
+            if(ans.size() == 0 || ans.back() != arr1[i]) {
                 ans.push_back(arr1[i]);
             }
-            
             i++;
         }
         
         while(j < m) {
-            if(ans.back() != arr2[j]) {
+            if(ans.size() == 0 || ans.back() != arr2[j]) {
                 ans.push_back(arr2[j]);
             }
-            
             j++;
         }
         

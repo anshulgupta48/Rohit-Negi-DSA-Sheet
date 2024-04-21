@@ -30,21 +30,20 @@ public:
 	        }
 	    }
 	    
-	    
 	    int i = 0;
 	    int j = 0;
 	    int k = 0;
 	    
-	    while(i<pos.size() && j<neg.size()) {
+	    while(i < pos.size() && j < neg.size()) {
 	        arr[k++] = pos[i++];
 	        arr[k++] = neg[j++];
 	    }
 	    
-	    while(i < pos.size()){ 
+	    while(i < pos.size()) {
 	        arr[k++] = pos[i++];
 	    }
 	    
-	    while(j < neg.size()){ 
+	    while(j < neg.size()) {
 	        arr[k++] = neg[j++];
 	    }
 	}

@@ -18,15 +18,16 @@
 class Solution{   
     public:
     void threeWayPartition(vector<int>& array,int a, int b) {
+        int n = array.size();
         int start = 0;
-        int end = array.size() - 1;
+        int end = n-1;
         
         for(int i = 0; i <= end; i++) {
             if(array[i] < a) {
                 swap(array[i], array[start]);
                 start++;
             }
-            else if(array[i] > b) {
+            if(array[i] > b) {
                 swap(array[i], array[end]);
                 i--;
                 end--;
