@@ -2,7 +2,7 @@
 
 // <======== Example ========>
 // Input: N = 5, Array = {2, 2, 2, 2, 2}
-// Output: 2
+// Output: 2 
 
 // Input: N = 4, Array = {1, 2, 2, 4}
 // Output: 1 2 4
