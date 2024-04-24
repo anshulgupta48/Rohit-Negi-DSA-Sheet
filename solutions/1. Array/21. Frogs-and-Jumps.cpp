@@ -18,19 +18,19 @@ class Solution {
   public:
     int unvisitedLeaves(int N, int leaves, int frogs[]) {
         int count = 0;
-        vector<bool> visited(leaves+1, false);
+        vector<bool> isVisited(leaves+1, false);
         
         for(int i = 0; i < N; i++) {
             int temp = frogs[i];
-            if(temp <= leaves && visited[temp] == false) {
+            if(temp <= leaves && isVisited[temp] == false) {
                 for(int j = temp; j <= leaves; j+=temp) {
-                    visited[j] = true;
+                    isVisited[j] = true;
                 }
             }
         }
         
         for(int i = 1; i <= leaves; i++) {
-            if(visited[i] == false) {
+            if(isVisited[i] == false) {
                 count++;
             }
         }
