@@ -27,7 +27,7 @@ class Solution{
                 swap(array[i], array[start]);
                 start++;
             }
-            if(array[i] > b) {
+            else if(array[i] > b) {
                 swap(array[i], array[end]);
                 i--;
                 end--;
