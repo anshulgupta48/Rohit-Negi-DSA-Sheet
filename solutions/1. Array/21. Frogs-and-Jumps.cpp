@@ -23,7 +23,7 @@ class Solution {
         for(int i = 0; i < N; i++) {
             int temp = frogs[i];
             if(temp <= leaves && isVisited[temp] == false) {
-                for(int j = temp; j <= leaves; j+=temp) {
+                for(int j = temp; j <= leaves; j += temp) {
                     isVisited[j] = true;
                 }
             }
