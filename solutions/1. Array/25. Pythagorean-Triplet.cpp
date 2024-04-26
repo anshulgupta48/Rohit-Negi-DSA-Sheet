@@ -20,8 +20,8 @@ public:
 	    for(int i = 0; i < n; i++) {
 	        arr[i] = arr[i] * arr[i];
 	    }
-	    
 	    sort(arr, arr+n);
+	    
 	    for(int i = n-1; i >= 2; i--) {
 	        int start = 0;
 	        int end = i-1;
@@ -29,13 +29,13 @@ public:
 	        while(start < end) {
 	            if(arr[start] + arr[end] == arr[i]) {
 	                return true;
-    	        }
-    	        else if(arr[start] + arr[end] < arr[i]) {
-    	            start++;
-    	        }
-    	        else {
-    	            end--;
-    	        }
+	            }
+	            else if(arr[start] + arr[end] < arr[i]) {
+	                start++;
+	            }
+	            else {
+	                end--;
+	            }
 	        }
 	    }
 	    
