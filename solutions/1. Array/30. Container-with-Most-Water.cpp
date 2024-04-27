@@ -16,11 +16,11 @@
 
 
 long long maxArea(long long A[], int len) {
-    long long ans = 0;
+    long long ans = INT_MIN;
     int start = 0;
     int end = len-1;
     
-    while(start < end) {
+    while(start <= end) {
         long long area = min(A[start], A[end]) * (end - start);
         ans = max(ans, area);
         
