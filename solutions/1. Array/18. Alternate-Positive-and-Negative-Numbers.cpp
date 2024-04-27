@@ -25,7 +25,7 @@ public:
 	        if(arr[i] >= 0) {
 	            pos.push_back(arr[i]);
 	        }
-	        if(arr[i] < 0) {
+	        else {
 	            neg.push_back(arr[i]);
 	        }
 	    }
