@@ -23,7 +23,7 @@ public:
             i--;
         }
         if(i < 0) {
-            reverse(nums.begin()+i+1, nums.end());
+            reverse(nums.begin(), nums.end());
             return;
         }
 
