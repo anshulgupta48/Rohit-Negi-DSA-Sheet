@@ -23,5 +23,5 @@ int missingNumber(int A[], int N) {
         sum += arr[i];
     }
         
-    return (totalSum - sum);
+    return (totalSum-sum);
 }
