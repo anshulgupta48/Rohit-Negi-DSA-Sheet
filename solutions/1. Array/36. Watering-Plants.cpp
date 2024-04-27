@@ -18,8 +18,8 @@ class Solution {
 public:
     int wateringPlants(vector<int>& plants, int capacity) {
         int n = plants.size();
-        int steps = 0;
         int currCapacity = capacity;
+        int steps = 0;
         int start = 0;
 
         while(start < n) {
@@ -32,8 +32,8 @@ public:
                 steps += (start * 2);
             }
 
-            start++;
             steps++;
+            start++;
         }
 
         return steps;
