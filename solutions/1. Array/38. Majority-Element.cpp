@@ -19,7 +19,7 @@ int majorityElement(int a[], int size) {
         if(count == 0) {
             ans = a[i];
         }
-
+            
         if(ans == a[i]) {
             count++;
         }
@@ -27,17 +27,17 @@ int majorityElement(int a[], int size) {
             count--;
         }
     }
-
+        
     count = 0;
     for(int i = 0; i < size; i++) {
         if(a[i] == ans) {
             count++;
         }
     }
-
+        
     if(count > size/2) {
         return ans;
     }
-
+        
     return -1;
 }
