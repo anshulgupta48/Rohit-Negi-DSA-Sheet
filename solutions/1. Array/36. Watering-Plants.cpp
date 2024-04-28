@@ -22,18 +22,18 @@ public:
         int steps = 0;
         int start = 0;
 
-        while(start < n) {
-            if(plants[start] <= currCapacity) {
-                currCapacity -= plants[start];
+        for(int i = 0; i < n; i++) {
+            if(plants[i] <= currCapacity) {
+                currCapacity -= plants[i];
             }
             else {
                 currCapacity = capacity;
-                currCapacity -= plants[start];
+                currCapacity -= plants[i];
                 steps += (start * 2);
             }
 
-            steps++;
             start++;
+            steps++;
         }
 
         return steps;
