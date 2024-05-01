@@ -26,7 +26,7 @@ int transitionPoint(int arr[], int n) {
         else {
             if(mid == 0 || mid > 0 && arr[mid-1] == 0) {
                 return mid;
-            }
+                }
             else {
                 end = mid - 1;
             }
