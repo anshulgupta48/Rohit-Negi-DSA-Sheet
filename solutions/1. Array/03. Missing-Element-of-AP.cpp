@@ -24,10 +24,10 @@ public:
         
         while(start <= end) {
             int mid = start + (end - start) / 2;
-            if(arr[mid+1]-arr[mid] != d) {
+            if(arr[mid+1] - arr[mid] != d) {
                 return arr[mid]+d;
             }
-            else if(arr[mid]-arr[mid-1] != d) {
+            else if(arr[mid] - arr[mid-1] != d) {
                 return arr[mid]-d;
             }
             else if(arr[mid] == arr[0] + mid*d) {
