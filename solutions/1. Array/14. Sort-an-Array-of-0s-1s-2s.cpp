@@ -30,7 +30,7 @@ class Solution {
             else if(a[mid] == 1) {
                 mid++;
             }
-            else {
+            else if(a[mid] == 2) {
                 swap(a[mid], a[end]);
                 end--;
             }
