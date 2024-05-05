@@ -18,24 +18,23 @@
 class Solution{
 public:
     vector<int> findTwoElement(vector<int> arr, int n) {
-        long long m = n;
-        long long totalSum = m*(m+1) / 2;
-        long long sum = 0;
-        long long squareTotalSum = (m*(m+1)*(2*m+1)) / 6;
-        long long squareSum = 0;
+        int start = 0;
+        int end = n-1;
+        int maxNumber = arr[n-1] + 1;
         
-        for(int i = 0; i < m; i++) {
-            sum += arr[i];
-            squareSum += (long long)arr[i] * (long long)arr[i];
+        for(int i = 0; i < n; i++) {
+            if(i%2 == 0) {
+                arr[i] += (arr[end] % maxNumber) * maxNumber;
+                end--;
+            }
+            else {
+                arr[i] += (arr[start] % maxNumber) * maxNumber;
+                start++;
+            }
         }
         
-        long long val1 = sum - totalSum;
-        long long val2 = squareSum - squareTotalSum;
-        val2 = val2 / val1;
-        
-        long long x = (val1 + val2) / 2;
-        long long y = x - val1;
-        
-        return {(int)x, (int)y};
+        for(int i = 0; i < n; i++) {
+            arr[i] = arr[i] / maxNumber;
+        }
     }
 };
