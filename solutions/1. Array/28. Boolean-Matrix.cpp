@@ -17,48 +17,24 @@
 class Solution{   
     public:
     void booleanMatrix(vector<vector<int> > &matrix){
-        int row = matrix.size();
-        int col = matrix[0].size();
-        int row_flag = 0;
-        int col_flag = 0;
+        int n = matrix.size();
+        int m = matrix[0].size();
+        vector<bool> rows(n), cols(m);
         
-        for(int i = 0; i < row; i++) {
-            for(int j = 0; j < col; j++) {
-                if(i == 0 && matrix[i][j] == 1) {
-                    row_flag = 1;
-                }
-                
-                if (j == 0 && matrix[i][j] == 1) {
-                    col_flag = 1;
-                }
-                
-                if (matrix[i][j] == 1) {
-                    matrix[0][j] = 1;
-                    matrix[i][0] = 1;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++) {
+                if(matrix[i][j] == 1) {
+                    rows[i] = 1;
+                    cols[j] = 1;
                 }
             }
         }
-            
-            
-        for (int i = 1; i < row; i++) {
-            for (int j = 1; j < col; j++) {
-                if (matrix[0][j] == 1 || matrix[i][0] == 1) {
+        
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++) {
+                if(rows[i] == 1 || cols[j] == 1) {
                     matrix[i][j] = 1;
                 }
-            }
-        }
-            
-            
-        if (row_flag == 1) {
-            for (int i = 0; i < col; i++) {
-                matrix[0][i] = 1;
-            }
-        }
-            
-            
-        if (col_flag == 1) {
-            for (int i = 0; i < row; i++) {
-                matrix[i][0] = 1;
             }
         }
     }
