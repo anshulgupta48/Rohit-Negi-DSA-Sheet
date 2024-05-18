@@ -17,12 +17,12 @@
 class Solution{
 public:
 	bool checkTriplet(int arr[], int n) {
+	    sort(arr, arr+n);
 	    for(int i = 0; i < n; i++) {
 	        arr[i] = arr[i] * arr[i];
 	    }
-	    sort(arr, arr+n);
 	    
-	    for(int i = n-1; i >= 2; i--) {
+	    for(int i = n-1; i > 2; i--) {
 	        int start = 0;
 	        int end = i-1;
 	        
