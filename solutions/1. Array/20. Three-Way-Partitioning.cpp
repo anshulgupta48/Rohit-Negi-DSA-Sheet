@@ -24,11 +24,11 @@ class Solution{
         
         for(int i = 0; i <= end; i++) {
             if(array[i] < a) {
-                swap(array[i], array[start]);
+                swap(array[start], array[i]);
                 start++;
             }
             if(array[i] > b) {
-                swap(array[i], array[end]);
+                swap(array[end], array[i]);
                 i--;
                 end--;
             }
