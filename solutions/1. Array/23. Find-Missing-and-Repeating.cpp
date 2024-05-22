@@ -18,7 +18,6 @@ class Solution{
 public:
     vector<int> findTwoElement(vector<int> arr, int n) {
         vector<int> ans(2);
-        
         for(int i = 0; i < n; i++) {
             if(arr[abs(arr[i])-1] > 0) {
                 arr[abs(arr[i])-1] = -arr[abs(arr[i])-1];
