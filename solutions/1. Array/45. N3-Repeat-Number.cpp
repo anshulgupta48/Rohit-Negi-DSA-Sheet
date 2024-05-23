@@ -13,7 +13,7 @@ int Solution::repeatedNumber(const vector<int> &A) {
     int count1 = 0, count2 = 0;
     
     for(int i = 0; i < n; i++) {
-    	if(element1 == A[i]) {
+        if(element1 == A[i]) {
             count1++;
         }
     	else if(element2 == A[i]) {
@@ -34,7 +34,7 @@ int Solution::repeatedNumber(const vector<int> &A) {
     }
     
     count1 = 0, count2 = 0;
-    for(auto x: A) {
+    for(int i = 0; i < n; i++) {
         if(element1 == x) {
             count1++;
         }
