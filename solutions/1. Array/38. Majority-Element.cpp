@@ -14,13 +14,15 @@
 
 
 int majorityElement(int a[], int size) {
-    int ans = 0, count = 0;
+    int element = -1;
+    int count = 0;
+        
     for(int i = 0; i < size; i++) {
         if(count == 0) {
-            ans = a[i];
+            element = a[i];
         }
             
-        if(ans == a[i]) {
+        if(a[i] == element) {
             count++;
         }
         else {
@@ -30,14 +32,13 @@ int majorityElement(int a[], int size) {
         
     count = 0;
     for(int i = 0; i < size; i++) {
-        if(a[i] == ans) {
+        if(a[i] == element) {
             count++;
         }
     }
         
     if(count > size/2) {
-        return ans;
+        return element;
     }
-        
     return -1;
 }
