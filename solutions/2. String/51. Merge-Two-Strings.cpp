@@ -18,11 +18,9 @@
 string merge (string S1, string S2) {
     int n = S1.length();
     int m = S2.length();
-    
     string ans = "";
-    int i = 0;
-    int j = 0;
     
+    int i = 0, j = 0;
     while(i < n && j < m) {
         ans += S1[i++];
         ans += S2[j++];

@@ -15,22 +15,24 @@
 
 
 int remAnagram(string str1, string str2) {
+    int n = str1.length();
+    int m = str2.length();
+    int count = 0;
     map<char, int> mp;
-    int ans = 0;
     
-    for(int i = 0; i < str1.length(); i++) {
-        int element = str1[i];
-        mp[element]++;
+    for(int i = 0; i < n; i++) {
+        mp[str1[i]]++;
     }
     
-    for(int i = 0; i < str2.length(); i++) {
-        int element = str2[i];
-        mp[element]--;
+    for(int i = 0; i < m; i++) {
+        mp[str2[i]]--;
     }
     
     for(auto x: mp) {
-        ans += abs(x.second);
+        if(x.second != 0) {
+            count += abs(x.second);
+        }
     }
     
-    return ans;
+    return count;
 }
