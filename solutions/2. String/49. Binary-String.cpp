@@ -17,14 +17,14 @@
 class Solution {
     public:
     long binarySubstring(int n, string a){
-        int count = 0;
+        int onesCount = 0;
         for(int i = 0; i < n; i++) {
             if(a[i] == '1') {
-                count++;
+                onesCount++;
             }
         }
         
-        long ans = count*(count-1) / 2;
+        long ans = onesCount*(onesCount-1) / 2;
         return ans;
     }
 };

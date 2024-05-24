@@ -18,22 +18,21 @@ class Solution {
     public:
     char getMaxOccuringChar(string str) {
         int n = str.length();
-        char ans;
-        int maxLength = 0;
-        
+        char maxOccuringChar;
+        int maxOccuringFreq = 0;
         map<char, int> mp;
+        
         for(int i = 0; i < n; i++) {
-            int element = str[i];
-            mp[element]++;
+            mp[str[i]]++;
         }
         
         for(auto x: mp) {
-            if(x.second > maxLength) {
-                maxLength = x.second;
-                ans = x.first;
+            if(x.second > maxOccuringFreq) {
+                maxOccuringFreq = x.second;
+                maxOccuringChar = x.first;
             }
         }
         
-        return ans;
+        return maxOccuringChar;
     }
 };
