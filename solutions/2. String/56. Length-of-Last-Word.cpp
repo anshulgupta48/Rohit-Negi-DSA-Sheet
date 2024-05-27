@@ -16,22 +16,22 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-        int n = s.size();
-        bool flag = 0;
-        int ans = 0;
+        int n = s.length();
+        string temp = "";
+        bool isLastWord = false;
 
         for(int i = n-1; i >= 0; i--) {
             if(s[i] != ' ') {
-                ans++;
-                flag = 1;
+                temp += s[i];
+                isLastWord = true;
             }
             else {
-                if(flag == 1) {
+                if(isLastWord == true) {
                     break;
                 }
             }
         }
 
-        return ans;
+        return temp.length();
     }
 };

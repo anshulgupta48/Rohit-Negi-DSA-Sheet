@@ -15,9 +15,9 @@
 
 
 int longestSubstrDistinctChars (string S) {
-    map<char, int> mp;
     int ans = 0;
     int i = 0;
+    map<char, int> mp;
     
     while(i < S.length()) {
         if(mp.count(S[i]) == 0) {

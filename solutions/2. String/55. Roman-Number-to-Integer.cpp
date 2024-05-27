@@ -16,7 +16,7 @@
 
 class Solution {
   public:
-    int val(char ch) {
+    int charVal(char ch) {
         if(ch == 'I') {
             return 1;
         }
@@ -38,30 +38,27 @@ class Solution {
         else if(ch == 'M') {
             return 1000;
         }
-        else {
-            return -1;
-        }
     }
-    
-    
+  
+  
     int romanToDecimal(string &str) {
-        int n = str.size();
+        int n = str.length();
         int ans = 0;
         
         for(int i = 0; i < n; i++) {
-            int s1 = val(str[i]);
+            int val1 = charVal(str[i]);
             if(i+1 < n) {
-                int s2 = val(str[i+1]);
-                if(s1 >= s2) {
-                    ans += s1;
+                int val2 = charVal(str[i+1]);
+                if(val1 < val2) {
+                    ans = ans + (val2 - val1);
+                    i++;
                 }
                 else {
-                    ans += (s2-s1);
-                    i++;
+                    ans = ans + val1;
                 }
             }
             else {
-                ans += s1;
+                ans = ans + val1;
             }
         }
         
