@@ -34,14 +34,13 @@ class Solution {
         st.push(temp);
         
         while(st.size() > 0) {
-            if(st.size() != 1) {
-                ans += st.top() + '.';
-                st.pop();
+            if(st.size() > 1) {
+                ans = ans + st.top() + '.';
             }
             else {
-                ans += st.top();
-                st.pop();
+                ans = ans + st.top();
             }
+            st.pop();
         }
         
         return ans;
