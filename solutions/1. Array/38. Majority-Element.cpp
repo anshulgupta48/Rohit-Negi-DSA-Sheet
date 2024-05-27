@@ -14,30 +14,28 @@
 
 
 int majorityElement(int a[], int size) {
+    int n = nums.size();
     int element = -1;
     int count = 0;
-        
-    for(int i = 0; i < size; i++) {
-        if(count == 0) {
-            element = a[i];
-        }
-            
-        if(a[i] == element) {
+
+    for(int i = 0; i < n; i++) {
+        if(count == 0 || nums[i] == element) {
+            element = nums[i];
             count++;
         }
         else {
             count--;
         }
     }
-        
+
     count = 0;
-    for(int i = 0; i < size; i++) {
-        if(a[i] == element) {
+    for(int i = 0; i < n; i++) {
+        if(nums[i] == element) {
             count++;
         }
     }
-        
-    if(count > size/2) {
+
+    if(count > n/2) {
         return element;
     }
     return -1;
