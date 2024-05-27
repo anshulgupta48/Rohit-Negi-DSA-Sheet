@@ -15,25 +15,18 @@
 
 
 int minFlips (string S) {
-    int n = S.size();
-    int count1 = 0, count2 = 0;
+    int n = S.length();
+    int count1 = 0;
+    int count2 = 0;
     
     for(int i = 0; i < n; i++) {
-        if(i%2 == 0 && S[i] == '0') {
+        if(S[i] == '0' && i%2 == 0 || S[i] == '1' && i%2 != 0) {
             count1++;
         }
-        else if(i%2 == 1 && S[i] == '1') {
-            count1++;
-        }
-        
-        if(i%2 == 0 && S[i] == '1') {
-            count2++;
-        }
-        else if(i%2 == 1 && S[i] == '0') {
+        if(S[i] == '1' && i%2 == 0 || S[i] == '0' && i%2 != 0) {
             count2++;
         }
     }
     
-    int ans = min(count1, count2);
-    return ans;
+    return min(count1, count2);
 }
