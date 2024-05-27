@@ -17,21 +17,21 @@
 class Solution{
   public:
     vector <string> generateCode(int N) {
-         vector<string> ans;
-         if(N == 1) {
-             ans.push_back("0");
-             ans.push_back("1");
-             return ans;
-         }
+        vector<string> ans;
+        if(N == 1) {
+            ans.push_back("0");
+            ans.push_back("1");
+            return ans;
+        }
+        
+        vector<string> temp = generateCode(N-1);
+        for(int i = 0; i < temp.size(); i++) {
+            ans.push_back("0" + temp[i]);
+        }
+        for(int i = temp.size()-1; i >= 0; i--) {
+            ans.push_back("1" + temp[i]);
+        }
          
-         vector<string> temp = generateCode(N-1);
-         for(int i = 0; i < temp.size(); i++) {
-             ans.push_back("0" + temp[i]);
-         }
-         for(int i = temp.size()-1; i >= 0; i--) {
-             ans.push_back("1" + temp[i]);
-         }
-         
-         return ans;
+        return ans;
     }
 };
