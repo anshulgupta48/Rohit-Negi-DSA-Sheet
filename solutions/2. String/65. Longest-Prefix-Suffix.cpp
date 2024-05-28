@@ -18,10 +18,11 @@
 class Solution{
   public:		
 	int lps(string s) {
-	    vector<int> ans(s.size(), 0);
+	    int n = s.length();
+	    vector<int> ans(n, 0);
 	    int i = 1, j = 0;
 	    
-	    while(i < s.size()) {
+	    while(i < n) {
 	        if(s[i] == s[j]) {
 	            ans[i] = j+1;
 	            i++;
