@@ -20,29 +20,29 @@
 class Solution{
     public:
     int findSubString(string str) {
-        set<char> s;
-        for(char x: str) {
-            s.insert(x);
+        int n = str.length();
+        int ans = INT_MAX;
+        set<char> st;
+        unordered_map<char, int> mp;
+    
+        for(auto x: str) {
+            st.insert(x);
         }
         
-        unordered_map<char, int> mp;
         int i = 0, j = 0;
-        int len = str.length();
-        
-        while(j < str.size()) {
+        while(j < n) {
             mp[str[j]]++;
-            if(mp.size() == s.size()) {
+            if(mp.size() == st.size()) {
                 while(mp[str[i]] > 1) {
                     mp[str[i]]--;
                     i++;
                 }
-                
-                len = min(len, j-i+1);
+                ans = min(ans, j-i+1);
             }
             
             j++;
         }
         
-        return len;
+        return ans;
     }
 };
