@@ -44,7 +44,7 @@ class Solution {
         }
         
         long long triplet1 = firstMax * secondMax * thirdMax;
-        long long triplet2 = firstMin * secondMin * firstMax;
+        long long triplet2 = firstMax * firstMin * secondMin;
         return max(triplet1, triplet2);
     }
 };
