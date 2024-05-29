@@ -22,11 +22,11 @@ public:
 	        arr[i] = arr[i] * arr[i];
 	    }
 	    
-	    for(int i = n-1; i > 0; i--) {
+	    for(int i = n-2; i > 0; i--) {
 	        int start = 0;
-	        int end = i-1;
+	        int end = n-1;
 	        
-	        while(start <= end) {
+	        while(start < end) {
 	            if(arr[start] + arr[end] == arr[i]) {
 	                return true;
 	            }
