@@ -25,10 +25,7 @@ public:
 	        if(arr[i] >= 0) {
 	            pos.push_back(arr[i]);
 	        }
-	    }
-	    
-	    for(int i = 0; i < n; i++) {
-	        if(arr[i] < 0) {
+	        else {
 	            neg.push_back(arr[i]);
 	        }
 	    }
