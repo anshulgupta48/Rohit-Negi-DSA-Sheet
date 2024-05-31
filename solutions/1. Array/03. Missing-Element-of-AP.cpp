@@ -38,6 +38,6 @@ public:
             }
         }
         
-        return -1;
+        return start;
     }
 };
