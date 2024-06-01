@@ -20,21 +20,21 @@ public:
     vector<int> findTwoElement(vector<int> arr, int n) {
         int start = 0;
         int end = n-1;
-        int maxNumber = arr[end]+1;
+        int maxElement = arr[end]+1;
         
         for(int i = 0; i < n; i++) {
             if(i%2 == 0) {
-                arr[i] += (arr[end] % maxNumber) * maxNumber;
+                arr[i] += (arr[end] % maxElement) * maxElement;
                 end--;
             }
             else {
-                arr[i] += (arr[start] % maxNumber) * maxNumber;
+                arr[i] += (arr[start] % maxElement) * maxElement;
                 start++;
             }
         }
         
         for(int i = 0; i < n; i++) {
-            arr[i] = arr[i] / maxNumber;
+            arr[i] = arr[i] / maxElement;
         }
     }
 };
