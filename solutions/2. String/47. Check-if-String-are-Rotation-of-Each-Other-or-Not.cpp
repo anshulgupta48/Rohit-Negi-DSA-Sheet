@@ -25,7 +25,6 @@ class Solution {
         if(s1.find(s2) != -1) {
             return true;
         }
-        
         return false;
     }
 };
