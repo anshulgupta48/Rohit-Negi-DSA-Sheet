@@ -19,10 +19,8 @@ bool metaStrings (string S1, string S2) {
         return false;
     }
     
-    int n = S1.length();
     int i = 0;
-    int j = n-1;
-    
+    int j = S1.length()-1;
     while(S1[i] == S2[i]) {
         i++;
     }

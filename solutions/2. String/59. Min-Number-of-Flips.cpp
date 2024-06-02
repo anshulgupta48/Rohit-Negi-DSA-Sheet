@@ -20,10 +20,10 @@ int minFlips (string S) {
     int count2 = 0;
     
     for(int i = 0; i < n; i++) {
-        if(S[i] == '0' && i%2 == 0 || S[i] == '1' && i%2 != 0) {
+        if(i%2 == 0 && S[i] == '0' || i%2 == 1 && S[i] == '1') {
             count1++;
         }
-        if(S[i] == '1' && i%2 == 0 || S[i] == '0' && i%2 != 0) {
+        if(i%2 == 0 && S[i] == '1' || i%2 == 1 && S[i] == '0') {
             count2++;
         }
     }

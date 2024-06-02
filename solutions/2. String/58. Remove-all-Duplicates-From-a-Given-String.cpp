@@ -22,10 +22,9 @@ public:
 	    set<char> st;
 	    
 	    for(int i = 0; i < n; i++) {
-	        char element = str[i];
-	        if(st.find(element) == st.end()) {
-	            st.insert(element);
-	            ans += element;
+	        if(st.find(str[i]) == st.end()) {
+	            st.insert(str[i]);
+	            ans += str[i];
 	        }
 	    }
 	    
