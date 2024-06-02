@@ -35,6 +35,5 @@ int longestSubstrDistinctChars (string S) {
     if(ans < mp.size()) {
         ans = mp.size();
     }
-    
     return ans;
 }

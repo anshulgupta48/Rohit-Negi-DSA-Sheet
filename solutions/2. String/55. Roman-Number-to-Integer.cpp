@@ -16,7 +16,7 @@
 
 class Solution {
   public:
-    int charVal(char ch) {
+    int charValue(char ch) {
         if(ch == 'I') {
             return 1;
         }
@@ -46,9 +46,9 @@ class Solution {
         int ans = 0;
         
         for(int i = 0; i < n; i++) {
-            int val1 = charVal(str[i]);
+            int val1 = charValue(str[i]);
             if(i+1 < n) {
-                int val2 = charVal(str[i+1]);
+                int val2 = charValue(str[i+1]);
                 if(val1 < val2) {
                     ans = ans + (val2 - val1);
                     i++;
