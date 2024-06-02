@@ -31,7 +31,7 @@ class Solution{
         for(int i = temp.size()-1; i >= 0; i--) {
             ans.push_back("1" + temp[i]);
         }
-         
+        
         return ans;
     }
 };
