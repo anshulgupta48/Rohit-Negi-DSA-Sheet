@@ -19,13 +19,14 @@ class Solution{
     int longestUniqueSubsttr(string S){
         int n = S.length();
         int ans = 0;
-        int count[256] = {0};
+        int charFreq[256] = {0};
         
-        int start = 0, end = 0;
+        int start = 0;
+        int end = 0;
         while(end < n) {
-            count[S[end]]++;
-            while(count[S[end]] > 1) {
-                count[S[start]]--;
+            charFreq[S[end]]++;
+            while(charFreq[S[end]] > 1) {
+                charFreq[S[start]]--;
                 start++;
             }
             
