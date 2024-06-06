@@ -29,6 +29,5 @@ int remAnagram(string str1, string str2) {
     for(auto x: mp) {
         count += abs(x.second);
     }
-    
     return count;
 }
