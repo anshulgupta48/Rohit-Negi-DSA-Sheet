@@ -19,7 +19,7 @@ public:
         int n = nums.size();
         int i = n-2;
         int j = n-1;
-
+        
         while(i >= 0 && nums[i] >= nums[i+1]) {
             i--;
         }
