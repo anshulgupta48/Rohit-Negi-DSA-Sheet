@@ -17,8 +17,8 @@
 class Solution{
   public:
     string longestCommonPrefix (string arr[], int N) {
-        sort(arr, arr+N);
         string ans = "";
+        sort(arr, arr+N);
         string str1 = arr[0];
         string str2 = arr[N-1];
         
