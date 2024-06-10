@@ -31,6 +31,7 @@ public:
                 currCapacity -= plants[i];
                 steps += (2 * start);
             }
+
             steps++;
             start++;
         }
