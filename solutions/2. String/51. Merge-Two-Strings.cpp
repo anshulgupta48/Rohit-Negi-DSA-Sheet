@@ -32,5 +32,6 @@ string merge (string S1, string S2) {
     while(j < S2.length()) {
         ans += S2[j++];
     }
+    
     return ans;
 }

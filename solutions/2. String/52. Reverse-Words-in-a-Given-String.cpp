@@ -18,9 +18,9 @@ class Solution {
     public:
     string reverseWords(string S) { 
         int n = S.length();
-        stack<string> st;
         string ans = "";
         string temp = "";
+        stack<string> st;
         
         for(int i = 0; i < n; i++) {
             if(S[i] != '.') {
