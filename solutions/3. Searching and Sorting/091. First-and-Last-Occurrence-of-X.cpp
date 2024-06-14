@@ -18,25 +18,27 @@ class Solution {
   public:
     vector<int> firstAndLast(vector<int> &arr, int n, int x) {
         vector<int> ans;
-        int a = -1, b = -1;
+        int a = -1;
+        int b = -1;
+        
         int start = 0;
         int end = n-1;
-        
         while(start <= end) {
             int mid = start + (end - start) / 2;
             if(arr[mid] == x) {
                 a = mid;
                 end = mid - 1;
             }
-            else if(arr[mid] > x) {
-                end = mid - 1;
+            else if(arr[mid] < x) {
+                start = mid + 1;
             }
             else {
-                start = mid + 1;
+                end = mid - 1;
             }
         }
         
-        start = 0, end = n - 1;
+        start = 0;
+        end = n-1;
         while(start <= end) {
             int mid = start + (end - start) / 2;
             if(arr[mid] == x) {
@@ -51,7 +53,7 @@ class Solution {
             }
         }
         
-        if(a<0 && b<0) {
+        if(a < 0 && b < 0) {
             ans.push_back(-1);
         }
         else {

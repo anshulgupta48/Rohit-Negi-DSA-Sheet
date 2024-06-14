@@ -17,24 +17,23 @@
 class Solution{
 public:
 	int countZeros(vector<vector<int>>A) {
-		int row = A.size();
-		int col = A[0].size();
-		int ans = 0;
-		
-		int i = 0;
-		int j = col - 1;
-		while(i>=0 && i<row && j>=0 && j<col) {
-		    if(A[i][j] == 0) {
-		        i++;
-		        ans += j+1;
-		    }
-		    else {
-		        if(A[i][j] == 1) {
-		            j--;
-		        }
-		    }
-		}
-		
-		return ans;
+		int n = A.size();
+	    int count = 0;
+	    int i = 0;
+	    int j = n-1;
+	    
+	    while(i < n && j >= 0) {
+	        if(A[i][j] == 0) {
+	            i++;
+	            count += (j+1);
+	        }
+	        else {
+	            if(A[i][j] == 1) {
+	                j--;
+	            }
+	        }
+	    }
+	    
+	    return count;
 	}
 };
