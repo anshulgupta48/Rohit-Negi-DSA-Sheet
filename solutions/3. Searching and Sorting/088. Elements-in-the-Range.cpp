@@ -27,7 +27,6 @@ class Solution{
 		if(A > B) {
 		    return true;
 		}
-		
 		return false;
 	}
 };

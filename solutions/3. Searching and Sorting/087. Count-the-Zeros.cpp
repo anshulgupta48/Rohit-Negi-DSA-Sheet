@@ -30,7 +30,6 @@ public:
             }
         }
         
-        int ans = n-1-end;
-        return ans;
+        return (n-1-end);
     }
 };
