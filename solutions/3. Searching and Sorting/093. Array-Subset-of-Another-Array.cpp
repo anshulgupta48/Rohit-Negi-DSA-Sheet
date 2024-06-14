@@ -20,17 +20,16 @@
 string isSubset(int a1[], int a2[], int n, int m) {
     unordered_map<int, int> mp;
     for(int i = 0; i < n; i++) {
-        int element = a1[i];
-        mp[element]++;
+        mp[a1[i]]++;
     }
     
     for(int i = 0; i < m; i++) {
-        int element = a2[i];
-        if(mp[element] == 0) {
+        mp[a2[i]]--;
+    }
+    
+    for(auto x: mp) {
+        if(x.second < 0) {
             return "No";
-        }
-        else {
-            mp[element]--;
         }
     }
     

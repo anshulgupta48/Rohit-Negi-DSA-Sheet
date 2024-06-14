@@ -17,12 +17,12 @@
 class Solution{
   public:
     int findFloor(vector<long long> v, long long n, long long x){
-        long long ans = -1;
-        long long start = 0;
-        long long end = n-1;
+        int ans = -1;
+        int start = 0;
+        int end = n-1;
         
         while(start <= end) {
-            long long mid = start + (end - start) / 2;
+            int mid = start + (end - start) / 2;
             if(v[mid] <= x) {
                 ans = mid;
                 start = mid + 1;
