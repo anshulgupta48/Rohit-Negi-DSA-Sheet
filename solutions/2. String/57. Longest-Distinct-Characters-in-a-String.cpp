@@ -15,11 +15,12 @@
 
 
 int longestSubstrDistinctChars (string S) {
+    int n = S.length();
     int ans = 0;
     int i = 0;
     map<char, int> mp;
     
-    while(i < S.length()) {
+    while(i < n) {
         if(mp.count(S[i]) == 0) {
             mp.insert({S[i], i});
             i++;

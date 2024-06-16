@@ -22,7 +22,8 @@ class Solution{
         string str1 = arr[0];
         string str2 = arr[N-1];
         
-        int i = 0, j = 0;
+        int i = 0;
+        int j = 0;
         while(i < str1.length() && j < str2.length()) {
             if(str1[i] == str2[j]) {
                 ans += str1[i];
@@ -34,9 +35,9 @@ class Solution{
             }
         }
         
-        if(ans.size() > 0) {
-            return ans;
+        if(ans.length() == 0) {
+            return "-1";
         }
-        return "-1";
+        return ans;
     }
 };
