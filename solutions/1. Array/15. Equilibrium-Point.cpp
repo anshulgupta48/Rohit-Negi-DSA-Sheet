@@ -22,15 +22,15 @@ class Solution{
         int sum = 0;
         
         for(int i = 0; i < n; i++) {
-            totalSum += a[i];
+            totalSum += arr[i];
         }
         
         for(int i = 0; i < n; i++) {
-            totalSum -= a[i];
-            if(sum == totalSum) {
+            totalSum -= arr[i];
+            if(totalSum == sum) {
                 return i+1;
             }
-            sum += a[i];
+            sum += arr[i];
         }
         
         return -1;
