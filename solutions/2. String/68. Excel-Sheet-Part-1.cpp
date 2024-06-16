@@ -15,7 +15,7 @@
 class Solution{
     public:
     string ExcelColumn(int N) {
-        string ans;
+        string ans = "";
         while(N > 0) {
             N--;
             int currValue = N % 26;

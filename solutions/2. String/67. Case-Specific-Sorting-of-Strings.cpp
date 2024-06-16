@@ -17,26 +17,29 @@
 class Solution {
     public:
     string caseSort(string str, int n) {
-        string lower, upper;
-        for(char x: str) {
-            if(x >= 'a') {
-                lower.push_back(x);
+        string lowerCase = "";
+        string upperCase = "";
+        
+        for(int i = 0; i < n; i++) {
+            if(str[i] >= 'a' && str[i] <= 'z') {
+                lowerCase += str[i];
             }
             else {
-                upper.push_back(x);
+                upperCase += str[i];
             }
         }
         
-        sort(lower.begin(), lower.end());
-        sort(upper.begin(), upper.end());
-        int i = 0, j = 0;
+        sort(lowerCase.begin(), lowerCase.end());
+        sort(upperCase.begin(), upperCase.end());
+        int i = 0;
+        int j = 0;
         
         for(int k = 0; k < n; k++) {
-            if(str[k] >= 'a') {
-                str[k] = lower[i++];
+            if(str[k] >= 'a' && str[k] <= 'z') {
+                str[k] = lowerCase[i++];
             }
             else {
-                str[k] = upper[j++];
+                str[k] = upperCase[j++];
             }
         }
         
