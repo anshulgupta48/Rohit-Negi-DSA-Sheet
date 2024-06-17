@@ -24,12 +24,11 @@ string isSubset(int a1[], int a2[], int n, int m) {
     }
     
     for(int i = 0; i < m; i++) {
-        mp[a2[i]]--;
-    }
-    
-    for(auto x: mp) {
-        if(x.second < 0) {
+        if(mp[a2[i]] == 0) {
             return "No";
+        }
+        else {
+            mp[a2[i]]--;
         }
     }
     
