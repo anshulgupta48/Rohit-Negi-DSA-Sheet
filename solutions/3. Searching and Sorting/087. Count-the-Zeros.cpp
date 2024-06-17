@@ -30,6 +30,6 @@ public:
             }
         }
         
-        return (n-1-end);
+        return (n-end-1);
     }
 };

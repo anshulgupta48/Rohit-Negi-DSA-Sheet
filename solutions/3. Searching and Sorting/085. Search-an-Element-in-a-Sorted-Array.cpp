@@ -25,11 +25,11 @@ class Solution{
             if(arr[mid] == K) {
                 return 1;
             }
-            else if(arr[mid] > K) {
-                end = mid - 1;
+            else if(arr[mid] < K) {
+                start = mid + 1;
             }
             else {
-                start = mid + 1;
+                end = mid - 1;
             }
         }
         
