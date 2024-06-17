@@ -24,13 +24,11 @@ public:
 	    
 	    while(i < n && j >= 0) {
 	        if(A[i][j] == 0) {
+	            count += (j + 1);
 	            i++;
-	            count += (j+1);
 	        }
 	        else {
-	            if(A[i][j] == 1) {
-	                j--;
-	            }
+	            j--;
 	        }
 	    }
 	    
