@@ -19,8 +19,8 @@ public:
     int wateringPlants(vector<int>& plants, int capacity) {
         int n = plants.size();
         int currCapacity = capacity;
-        int steps = 0;
         int start = 0;
+        int steps = 0;
 
         for(int i = 0; i < n; i++) {
             if(plants[i] <= currCapacity) {
@@ -31,6 +31,7 @@ public:
                 currCapacity -= plants[i];
                 steps += (2 * start);
             }
+
             start++;
             steps++;
         }
