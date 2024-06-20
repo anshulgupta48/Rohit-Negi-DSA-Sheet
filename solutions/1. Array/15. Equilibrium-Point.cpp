@@ -27,7 +27,7 @@ class Solution{
         
         for(int i = 0; i < n; i++) {
             totalSum -= arr[i];
-            if(totalSum == sum) {
+            if(sum == totalSum) {
                 return i+1;
             }
             sum += arr[i];
