@@ -30,12 +30,12 @@ public:
 	            if(arr[start] + arr[end] == arr[i]) {
 	                return true;
 	            }
-	            else if(arr[start] + arr[end] < arr[i]) {
-	                start++;
-	            }
-	            else {
-	                end--;
-	            }
+    	        else if(arr[start] + arr[end] < arr[i]) {
+    	            start++;
+    	        }
+    	        else {
+    	            end--;
+    	        }
 	        }
 	    }
 	    
