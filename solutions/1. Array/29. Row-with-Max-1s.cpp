@@ -17,8 +17,8 @@
 class Solution{
 public:
 	int rowWithMax1s(vector<vector<int> > arr, int n, int m) {
-	    int maxOnes = 0;
 	    int maxRow = -1;
+	    int maxOnes = 0;
 	    
 	    for(int i = 0; i < n; i++) {
 	        int onesCount = 0;
@@ -29,8 +29,8 @@ public:
 	        }
 	        
 	        if(onesCount > maxOnes) {
-	            maxOnes = onesCount;
 	            maxRow = i;
+	            maxOnes = onesCount;
 	        }
 	    }
 	    
