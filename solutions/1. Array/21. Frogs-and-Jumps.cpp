@@ -17,7 +17,7 @@
 class Solution {
   public:
     int unvisitedLeaves(int N, int leaves, int frogs[]) {
-       int count = 0;
+        int count = 0;
         vector<bool> isVisited(leaves+1, false);
         
         for(int i = 0; i < N; i++) {
