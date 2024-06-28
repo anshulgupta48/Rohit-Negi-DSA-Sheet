@@ -15,7 +15,7 @@
 
 
 int remAnagram(string str1, string str2) {
-    int ans = 0;
+    int count = 0;
     map<char, int> mp;
     
     for(int i = 0; i < str1.length(); i++) {
@@ -27,8 +27,8 @@ int remAnagram(string str1, string str2) {
     }
     
     for(auto x: mp) {
-        ans += abs(x.second);
+        count += abs(x.second);
     }
     
-    return ans;
+    return count;
 }
