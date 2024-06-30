@@ -17,7 +17,7 @@
 
 class Solution{
     public:
-    int equilibriumPoint(long long a[], int n) {
+    int equilibriumPoint(long long arr[], int n) {
         int totalSum = 0;
         int sum = 0;
         
