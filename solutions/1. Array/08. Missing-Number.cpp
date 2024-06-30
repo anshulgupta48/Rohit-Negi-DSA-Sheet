@@ -15,7 +15,7 @@
 
 
 
-int missingNumber(int A[], int N) {
+int missingNumber(int arr[], int n) {
     int totalSum = n*(n+1) / 2;
     int sum = 0;
         
