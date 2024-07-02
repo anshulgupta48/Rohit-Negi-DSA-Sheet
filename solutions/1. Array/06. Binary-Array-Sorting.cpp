@@ -26,8 +26,8 @@ class Solution{
         
         for(int i = 0; i < N; i++) {
             if(zeroCount > 0) {
-                zeroCount--;
                 A[i] = 0;
+                zeroCount--;
             }
             else {
                 A[i] = 1;

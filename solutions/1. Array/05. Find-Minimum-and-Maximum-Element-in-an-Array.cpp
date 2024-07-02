@@ -14,16 +14,17 @@
 
 
 
-pair<long long, long long> getMinMax(long long a[], int n) {
+pair<long long, long long> getMinMax(long long a[]) {
+    int n = arr.size();
     long long minElement = INT_MAX;
     long long maxElement = INT_MIN;
         
     for(int i = 0; i < n; i++) {
-        if(a[i] < minElement) {
-            minElement = a[i];
+        if(arr[i] < minElement) {
+            minElement = arr[i];
         }
-        if(a[i] > maxElement) {
-            maxElement = a[i];
+        if(arr[i] > maxElement) {
+            maxElement = arr[i];
         }
     }
         
