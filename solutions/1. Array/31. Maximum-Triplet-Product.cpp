@@ -17,8 +17,8 @@
 class Solution {
   public:
     long long maxTripletProduct(long long arr[], int n) {
-    	long firstMax = INT_MIN, secondMax = INT_MIN, thirdMax = INT_MIN;
-        long firstMin = INT_MAX, secondMin = INT_MAX;
+    	long long firstMax = INT_MIN, secondMax = INT_MIN, thirdMax = INT_MIN;
+        long long firstMin = INT_MAX, secondMin = INT_MAX;
         
         for(int i = 0; i < n; i++) {
             if(arr[i] > firstMax) {
