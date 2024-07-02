@@ -33,7 +33,7 @@ public:
 	    int i = 0;
 	    int j = 0;
 	    int k = 0;
-	    
+		
 	    while(i < pos.size() && j < neg.size()) {
 	        arr[k++] = pos[i++];
 	        arr[k++] = neg[j++];
