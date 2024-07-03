@@ -2,7 +2,7 @@
 
 // <======== Example ========>
 // Input: [1 2 3 1 1]
-// Output: 1 
+// Output: 1
 
 
 
