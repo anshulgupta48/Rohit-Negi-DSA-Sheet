@@ -16,7 +16,7 @@
 
 class Solution{
 	public:
-	long long countTriplets(long long arr[], int n, long long sum) {
+	long long countTriplets(int n, long long sum, long long arr[]) {
 	    long long count = 0;
         sort(arr, arr+n);
         

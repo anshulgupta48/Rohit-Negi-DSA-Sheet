@@ -17,7 +17,7 @@
 
 class Solution{
 public:
-    vector<int> findTwoElement(vector<int> arr, int n) {
+    vector<int> findTwoElement(long long *arr, int n) {
         int start = 0;
         int end = n-1;
         int maxElement = arr[n-1] + 1;
