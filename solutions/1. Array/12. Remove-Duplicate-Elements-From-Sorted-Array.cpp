@@ -16,15 +16,17 @@
 
 class Solution{
 public:
-    int remove_duplicate(int a[],int n){
+    int remove_duplicate(vector<int> &arr){
+        int n = arr.size();
         int i = 0;
+        
         for(int j = 0; j < n-1; j++) {
-            if(a[j] != a[j+1]) {
-                a[i++] = a[j];
+            if(arr[j] != arr[j+1]) {
+                arr[i++] = arr[j];
             }
         }
         
-        a[i++] = a[n-1];
+        arr[i++] = arr[n-1];
         return i;
     }
 };
