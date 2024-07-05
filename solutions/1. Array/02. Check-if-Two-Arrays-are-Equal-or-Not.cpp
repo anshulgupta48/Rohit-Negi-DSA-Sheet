@@ -17,12 +17,13 @@
 
 class Solution{
     public:
-    bool check(vector<ll> A, vector<ll> B, int N) {
-        sort(A.begin(), A.end());
-        sort(B.begin(), B.end());
+    bool check(vector<int>& arr1, vector<int>& arr2) {
+        int n = arr1.size();
+        sort(arr1.begin(), arr1.end());
+        sort(arr2.begin(), arr2.end());
         
-        for(int i = 0; i < N; i++) {
-            if(A[i] != B[i]) {
+        for(int i = 0; i < n; i++) {
+            if(arr1[i] != arr2[i]) {
                 return false;
             }
         }

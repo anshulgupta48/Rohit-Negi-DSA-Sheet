@@ -14,7 +14,7 @@
 
 
 
-void rotate(int arr[]) {
+void rotate(vector<int> &arr) {
     int n = arr.size();
     int temp = arr[n-1];
         
