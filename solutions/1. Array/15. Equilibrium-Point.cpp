@@ -17,7 +17,7 @@
 
 class Solution{
     public:
-    int equilibriumPoint(long long arr[]) {
+    int equilibriumPoint(vector<long long> &arr) {
         int n = arr.size();
         int totalSum = 0;
         int sum = 0;
