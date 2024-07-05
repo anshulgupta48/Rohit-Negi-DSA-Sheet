@@ -15,7 +15,7 @@
 
 
 
-int missingNumber(int arr[], int n) {
+int missingNumber(int n, vector<int> &arr) {
     int totalSum = n*(n+1) / 2;
     int sum = 0;
         

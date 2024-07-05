@@ -14,7 +14,7 @@
 
 
 
-pair<long long, long long> getMinMax(long long a[]) {
+pair<long long, long long> getMinMax(vector<long long int> arr) {
     int n = arr.size();
     long long minElement = INT_MAX;
     long long maxElement = INT_MIN;
