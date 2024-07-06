@@ -18,38 +18,26 @@
 class Solution{
     public:
     int Maximum_Sum(vector<vector<int>> &mat,int N,int K){
-        for(int i = 0; i < N; i++) {
-            for(int j = 1; j < N; j++) {
-                mat[i][j] += mat[i][j-1];
+        int maxSum = INT_MIN;
+        int temp[N+1][N+1];
+        
+        for(int i = 0; i <= N; i++) {
+            for(int j = 0; j <= N; j++) {
+                temp[i][0] = 0;
+                temp[0][j] = 0;
             }
         }
         
-        for (int i = 1; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                mat[i][j] += mat[i - 1][j];
+        for(int i = 1; i <= N; i++) {
+            for(int j = 1; j <= N; j++) {
+                temp[i][j] = mat[i-1][j-1] + temp[i-1][j] + temp[i][j-1] - temp[i-1][j-1];
+                if(i >= K && j >= K) {
+                    int sum = temp[i][j] - temp[i-K][j] - temp[i][j-K] + temp[i-K][j-K];
+                    maxSum = max(maxSum, sum);
+                }
             }
         }
         
-        int ans = INT_MIN;
-        for (int i = K-1; i < N; i++) {
-            for (int j = K-1; j < N; j++) {
-                int sum = mat[i][j];
-                if (i > K-1) {
-                    sum -= mat[i - K][j];
-                }
-                    
-                if (j > K-1) {
-                    sum -= mat[i][j - K];
-                }
-                    
-                if (i > K-1 && j > K-1) {
-                    sum += mat[i - K][j - K];
-                }
-                    
-                ans = max(ans, sum);
-            }
-        }
-        
-        return ans;
+        return maxSum;
     }  
 };
