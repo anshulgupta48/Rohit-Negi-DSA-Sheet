@@ -14,26 +14,43 @@
 
 class Solution {
 public:
+    bool isArithmetic(vector<int> &temp) {
+        int n = temp.size();
+        if(n == 2) {
+            return true;
+        }
+
+        int d = temp[1] - temp[0];
+        for(int i = 2; i < n; i++) {
+            if(temp[i] - temp[i-1] != d) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+    
+
     vector<bool> checkArithmeticSubarrays(vector<int>& nums, vector<int>& l, vector<int>& r) {
+        int n = l.size();
         vector<bool> ans;
-        for(int i = 0; i < l.size(); i++) {
+
+        for(int i = 0; i < n; i++) {
+            int a = l[i];
+            int b = r[i];
             vector<int> temp;
-            for(int j = l[i]; j <= r[i]; j++) {
+
+            for(int j = a; j <= b; j++) {
                 temp.push_back(nums[j]);
             }
-
             sort(temp.begin(), temp.end());
-            int fd = temp[1] - temp[0];
-            bool fl = true;
-            
-            for(int j = 2; j < temp.size(); j++) {
-                if(temp[j] - temp[j-1] != fd) {
-                    fl = false;
-                    break;
-                }
-            }
 
-            ans.push_back(fl);
+            if(isArithmetic(temp)) {
+                ans.push_back(true);
+            }
+            else {
+                ans.push_back(false);
+            }
         }
 
         return ans;
