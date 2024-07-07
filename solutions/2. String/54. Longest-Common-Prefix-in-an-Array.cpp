@@ -18,12 +18,13 @@ class Solution{
   public:
     string longestCommonPrefix (string arr[], int N) {
         string ans = "";
-        sort(arr, arr+N);
+        sort(arr, arr+n);
         string str1 = arr[0];
-        string str2 = arr[N-1];
+        string str2 = arr[n-1];
         
         int i = 0;
         int j = 0;
+        
         while(i < str1.length() && j < str2.length()) {
             if(str1[i] == str2[j]) {
                 ans += str1[i];

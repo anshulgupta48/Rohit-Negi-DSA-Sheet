@@ -16,7 +16,7 @@
 
 int longestSubstrDistinctChars (string S) {
     int n = S.length();
-    int ans = 0;
+    int count = 0;
     int i = 0;
     map<char, int> mp;
     
@@ -27,14 +27,14 @@ int longestSubstrDistinctChars (string S) {
         }
         else {
             int temp = mp.size();
-            ans = max(ans, temp);
+            count = max(count, temp);
             i = mp[S[i]] + 1;
             mp.clear();
         }
     }
     
-    if(ans < mp.size()) {
-        ans = mp.size();
+    if(count < mp.size()) {
+        count = mp.size();
     }
-    return ans;
+    return count;
 }
