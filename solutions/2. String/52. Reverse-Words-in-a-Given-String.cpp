@@ -31,8 +31,8 @@ class Solution {
                 temp = "";
             }
         }
-        st.push(temp);
         
+        st.push(temp);
         while(st.size() > 0) {
             if(st.size() > 1) {
                 ans = ans + st.top() + '.';
