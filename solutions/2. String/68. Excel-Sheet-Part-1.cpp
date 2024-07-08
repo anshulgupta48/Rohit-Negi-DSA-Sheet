@@ -18,9 +18,8 @@ class Solution{
         string ans = "";
         while(N > 0) {
             N--;
-            int currValue = N % 26;
+            ans += 'A' + (N % 26);
             N = N / 26;
-            ans.push_back(currValue + 'A');
         }
         
         reverse(ans.begin(), ans.end());
