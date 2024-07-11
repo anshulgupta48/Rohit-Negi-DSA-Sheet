@@ -19,7 +19,7 @@ public:
         int n = s.length();
         string temp = "";
         bool isLastWord = false;
-
+        
         for(int i = n-1; i >= 0; i--) {
             if(s[i] != ' ') {
                 temp += s[i];
