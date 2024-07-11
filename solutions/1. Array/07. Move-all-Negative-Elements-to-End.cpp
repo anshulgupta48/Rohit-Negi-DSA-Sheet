@@ -16,7 +16,8 @@
 
 class Solution{
     public:
-    void segregateElements(int arr[],int n) {
+    void segregateElements(vector<int> &arr) {
+        int n = arr.size();
         int i = 0;
         int temp[n];
         
