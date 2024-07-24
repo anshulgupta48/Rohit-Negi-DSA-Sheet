@@ -17,7 +17,8 @@
 
 class Solution{   
 public:
-    int findMissing(int arr[], int n) {
+    int findMissing(int arr[]) {
+        int n = arr.size();
         int d = (arr[n-1] - arr[0]) / n;
         int start = 0;
         int end = n-1;
