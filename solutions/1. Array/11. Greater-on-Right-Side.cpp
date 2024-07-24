@@ -16,12 +16,16 @@
 
 class Solution{
 public:	
-	void nextGreatest(int arr[], int n) {
-	    int replace = -1;
-	    for(int i = n-1; i >= 0; i--) {
-	        int temp = replace;
-	        replace = max(replace, arr[i]);
-	        arr[i] = temp;
-	    }
+	vector<int> nextGreatest(int arr[], int n) {
+	    int n = arr.size();
+        int replace = -1;
+        
+        for(int i = n-1; i >= 0; i--) {
+            int temp = replace;
+            replace = max(replace, arr[i]);
+            arr[i] = temp;
+        }
+        
+        return arr;
 	}
 };
