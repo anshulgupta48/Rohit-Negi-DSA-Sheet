@@ -16,24 +16,26 @@
 
 class Solution{
 public:
-	int rowWithMax1s(vector<vector<int> > arr, int n, int m) {
-	    int maxRow = -1;
-	    int maxOnes = 0;
-	    
-	    for(int i = 0; i < n; i++) {
-	        int onesCount = 0;
-	        for(int j = 0; j < m; j++) {
-	            if(arr[i][j] == 1) {
-	                onesCount++;
-	            }
-	        }
-	        
-	        if(onesCount > maxOnes) {
-	            maxRow = i;
-	            maxOnes = onesCount;
-	        }
-	    }
-	    
-	    return maxRow;
+	int rowWithMax1s(vector<vector<int> > arr) {
+	    int n = arr.size();
+        int m = arr[0].size();
+        int maxRow = -1;
+        int maxOnes = 0;
+        
+        for(int i = 0; i < n; i++) {
+            int onesCount = 0;
+            for(int j = 0; j < m; j++) {
+                if(arr[i][j] == 1) {
+                    onesCount++;
+                }
+            }
+            
+            if(onesCount > maxOnes) {
+                maxRow = i;
+                maxOnes = onesCount;
+            }
+        }
+        
+        return maxRow;
 	}
 };
