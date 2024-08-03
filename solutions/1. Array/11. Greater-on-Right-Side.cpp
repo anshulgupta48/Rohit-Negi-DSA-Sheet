@@ -16,7 +16,7 @@
 
 class Solution{
 public:	
-	vector<int> nextGreatest(int arr[], int n) {
+	vector<int> nextGreatest(vector<int> arr) {
 	    int n = arr.size();
         int replace = -1;
         

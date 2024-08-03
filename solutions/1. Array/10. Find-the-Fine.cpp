@@ -16,7 +16,8 @@
 
 class Solution{
   public:
-    long long int totalFine(int n, int date, int car[], int fine[]) {
+    long long int totalFine(int date, int car[], int fine[]) {
+        int n = car.size();
         long long int ans = 0;
         
         if(date%2 == 0) {
