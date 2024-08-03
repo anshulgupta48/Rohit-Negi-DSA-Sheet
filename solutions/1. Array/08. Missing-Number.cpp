@@ -6,7 +6,7 @@
 // Output: 2
 
 // Input: N = 5, A[] = {2, 5, 3, 1}
-// Output: 4
+// Output: 4 
 
 
 // Expected Time Complexity ==> O(N)
