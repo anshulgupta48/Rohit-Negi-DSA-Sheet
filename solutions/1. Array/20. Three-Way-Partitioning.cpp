@@ -20,7 +20,7 @@ class Solution{
     void threeWayPartition(vector<int>& array,int a, int b) {
         int n = array.size();
         int start = 0;
-        int end = n-1;
+        int end = n-1; 
         
         for(int i = 0; i <= end; i++) {
             if(array[i] < a) {
