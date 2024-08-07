@@ -18,6 +18,7 @@ class Solution{
   public:
     void binSort(int A[], int N) {
         int zeroCount = 0;
+        
         for(int i = 0; i < N; i++) {
             if(A[i] == 0) {
                 zeroCount++;
