@@ -19,7 +19,7 @@ public:
         int row = matrix.size();
         int col = matrix[0].size();
         int start = 0;
-        int end = (row*col) - 1;
+        int end = row*col - 1;
 
         while(start <= end) {
             int mid = start + (end - start) / 2;
